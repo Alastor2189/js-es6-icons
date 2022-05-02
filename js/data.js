@@ -4,7 +4,7 @@
 // Ciascuna icona ha una proprietà "color": utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
 // :muso_unicorno: BONUS
 // Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone (animal, vegetable, user). Quando l'utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
-const animals = [{
+const containerIcons = [{
         name: 'cat',
         prefix: 'fa-',
         type: 'animal',
@@ -122,9 +122,8 @@ const animals = [{
 
 const container = document.querySelector(".container");
 
-animals.forEach(element => {
+containerIcons.forEach(element => {
     let div = document.createElement("div");
-    divIcons = div.innerHTML = `<div class="animals"> <div class="${element.type}"><i class= "${element.family} ${element.prefix} ${element.name}</i> </div> <p>${element.name} </p> </div>`
+    divIcons = div.innerHTML = `<div class="container-icons"><div class="${element.type}"><i class="${element.family} ${element.prefix}${element.name}"></i></div><p>${element.name}</p></div>`;
     container.append(div);
-
 });
